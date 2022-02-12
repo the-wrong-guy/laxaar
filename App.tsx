@@ -56,7 +56,11 @@ export default function App() {
       <View style={styles.filterContainer}>
         <DropDown data={proximityDropDownOptions} placeholder='Proximity' />
         <View style={styles.filterDivider} />
-        <DropDown data={ratingDropDownOptions} placeholder='Rating' />
+        <DropDown
+          data={ratingDropDownOptions}
+          placeholder='Rating'
+          dropdownStyle={{ maxWidth: 110 }}
+        />
         <View style={styles.filterDivider} />
         <View style={styles.filter3}>
           <Text style={styles.filterName}>Popular</Text>

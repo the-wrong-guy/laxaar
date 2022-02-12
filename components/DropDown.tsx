@@ -14,12 +14,16 @@ const data = [
   { label: "Item 8", value: "8" },
 ];
 
-export default function DropDown({ placeholder, data }: IDropDown) {
+export default function DropDown({
+  placeholder,
+  data,
+  dropdownStyle,
+}: IDropDown) {
   const [value, setValue] = useState(null);
 
   return (
     <Dropdown
-      style={styles.dropdown}
+      style={[styles.dropdown, dropdownStyle]}
       placeholderStyle={styles.placeholderStyle}
       selectedTextStyle={styles.selectedTextStyle}
       iconStyle={styles.iconStyle}
@@ -64,7 +68,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   placeholderStyle: {
-    fontSize: 14,
+    fontSize: 13,
     fontFamily: "Inter600",
   },
   selectedTextStyle: {
